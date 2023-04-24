@@ -23,9 +23,9 @@ public class Contador {
 	public Contador(int cont) {
 		super();
 		if (cont < 0) {
-			this.cont = cont;
-		} else {
 			this.cont = 0;
+		} else {
+			this.cont = cont;
 		}
 	}
 	
@@ -50,13 +50,18 @@ public class Contador {
 	 * @param cont
 	 */
 	public void setCont(int cont) {
-		this.cont = cont;
+		if(cont<0) {
+			cont=0;
+		}else {
+			this.cont = cont;
+		}
+		
 	}
 	/**
 	 * 
 	 * @param hasta
 	 */
-	public void incrementar(int hasta,int incrementar) {
+	public void incrementar() {
 		cont++;
 	}
 

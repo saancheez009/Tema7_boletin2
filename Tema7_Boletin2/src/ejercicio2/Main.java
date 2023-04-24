@@ -20,7 +20,15 @@ public class Main {
 		System.out.println("Por favor introduzca la cantidad a decrementar");
 		decremento=sc.nextInt();
 		
-		System.out.println(contador.toString());
+		for(int i=0 ; i<incremento;i++) {
+			contador.incrementar();
+		}
+		for(int i=0 ; i<decremento;i++) {
+			contador.decrementar();
+		}
+		
+		
+		System.out.println(contador);
 		
 
 	}
